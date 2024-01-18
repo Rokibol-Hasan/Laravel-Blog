@@ -1,0 +1,14 @@
+
+Admin Logout Option- done
+
+Next //todo
+Start From- Customize register form //
+Start From- Display  Toaster message in login logout
+Start From- Multi Image Setup
+5. Backend Add Multi Image in About Page Part 5.mp4
+
+start from- project portfolio setup
+
+start from - project blog page setup 13
+
+footer setup
