@@ -9,16 +9,19 @@ use Illuminate\Support\Carbon;
 
 class BlogCategoryController extends Controller
 {
-    public function allBlogCategory(){
+    public function allBlogCategory()
+    {
         $blogCategories = BlogCategory::latest()->get();
-        return view('admin.blog_category.blog_category_all',compact('blogCategories'));
+        return view('admin.blog_category.blog_category_all', compact('blogCategories'));
     }
 
-    public function addBlogCategory(){
+    public function addBlogCategory()
+    {
         return view('admin.blog_category.add_blog_category');
     }
 
-    public function storeBlogCategory(Request $request){
+    public function storeBlogCategory(Request $request)
+    {
         $request->validate([
             'blog_category' => 'required',
         ], [
@@ -37,12 +40,14 @@ class BlogCategoryController extends Controller
     }
 
 
-    public function editBlogCategory($id){
+    public function editBlogCategory($id)
+    {
         $category = BlogCategory::findOrFail($id);
-        return view('admin.blog_category.edit_blog_category',compact('category'));
+        return view('admin.blog_category.edit_blog_category', compact('category'));
     }
 
-    public function updateBlogCategory(Request $request){
+    public function updateBlogCategory(Request $request)
+    {
 
         $cat_id = $request->id;
         $request->validate([
@@ -62,7 +67,8 @@ class BlogCategoryController extends Controller
         return redirect()->route('all.blog.category')->with($notification);
     }
 
-    public function deleteBlogCategory($id){
+    public function deleteBlogCategory($id)
+    {
         BlogCategory::findOrFail($id)->delete();
         $notification = array(
             'message' => 'Category Deleted Successfully!',

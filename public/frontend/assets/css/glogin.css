@@ -1,0 +1,103 @@
+.full-nav{
+    height: 100px;
+    background-color:white;
+}
+  
+.nav-inner{
+    display: flex;
+   
+   
+}
+.brand-logo img{
+  width: 15%;
+}
+.ancore a {
+    font-size: 14px;
+    margin-left: 16px;
+    
+}
+a {
+    color: rgb(13, 110, 253);
+    text-decoration: underline;
+}
+.custom-container {
+    padding: 0px 120px;
+}
+.heading h4 {
+    font-size: 18px;
+    color: rgb(69, 68, 68);
+}
+.submit-option button {
+    padding: 3px 15px;
+    border-radius: 4px;
+    background-color: #6EB8F1;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+}.submit-opstion {
+    margin-top: 10px;
+}
+.submit-option input {
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 3px 6px;
+    border: 1px solid rgb(207, 204, 204);
+    outline: none;
+}
+.side-logo img {
+    height: 100px;
+   
+}
+.side-logo{
+    margin-top: 20px;
+}
+.text {
+    margin-top: 10px;
+}
+.text h5 {
+    margin-top: 5px;
+    color: rgb(188, 187, 187);
+}
+.text p {
+    color: rgb(151, 143, 143);
+}
+p {
+    margin-top: 0px;
+    margin-bottom: 1rem;
+}.text a {
+    color: rgb(194, 190, 190);
+    margin-top: 5px;
+    text-decoration: none;
+}
+.service {
+    margin-top: 15px;
+}
+.service h6 {
+    color: #77B27B;
+    font-size: 25px;
+}
+.unorder-list {
+    margin-top: 10px;
+}
+.unorder-list ul li {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.simple-text {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+.custom-containerr {
+    padding: 10px 30px;
+    margin-top: 10px;
+}
+.footer-text .big-text {
+    padding: 10px 50px;
+    height: 3600px;
+    width: 500px;
+    background-color: #eaeced;
+    font-size: 20px;
+    margin-top: 10px;
+    height: 500px;
+}

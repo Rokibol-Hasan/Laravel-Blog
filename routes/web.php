@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\backend\AccountShowController;
 use App\Http\Controllers\Home\AboutController;
+use App\Http\Controllers\Home\AccountController;
 use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\HomeSliderController;
@@ -25,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 // })->name('home');
 // User all routes
 Route::get('/', function () {
-    return view('frontend.index');
+    return view('index');
 })->name('home');
 //Admin all routes
 Route::controller(AdminController::class)->group(function(){
@@ -40,58 +42,28 @@ Route::controller(AdminController::class)->group(function(){
 });
 
 
-//Home all routes
-Route::controller(HomeSliderController::class)->group(function () {
-    Route::get('/home/slide', 'homeSlider')->name('home.slide');
-    Route::post('/update/slider', 'updateSlider')->name('update.slider');
-});
 
-//About page all routes
-Route::controller(AboutController::class)->group(function () {
-    Route::get('/about/page', 'aboutPage')->name('about.page');
-    Route::post('/update/about', 'updateAbout')->name('update.about');
-    Route::get('/about', 'homeAbout')->name('home.about');
-    Route::get('/about/multi/image', 'aboutMultiImage')->name('about.multi.image');
-    Route::post('/store/multi/image', 'storeMultiImage')->name('store.multi.image');
-    Route::get('/all/multi/image', 'allMultiImage')->name('all.multi.image');
-    Route::get('/edit/multi/image/{id}', 'editMultiImage')->name('edit.multi.image');
-    Route::post('/update/multi/image', 'updateMultiImage')->name('update.multi.image');
-    Route::get('/delete/multi/image/{id}', 'deleteMultiImage')->name('delete.multi.image');
-});
 
-// Portfolio Controller Routes
-Route::controller(PortfolioController::class)->group(function () {
-    Route::get('/all/portfolio', 'allPortfolio')->name('all.portfolio');
-    Route::get('/add/portfolio', 'addPortfolio')->name('add.portfolio');
-    Route::post('/store/portfolio', 'storePortfolio')->name('store.portfolio');
-    Route::get('/edit/portfolio/{id}', 'editPortfolio')->name('edit.portfolio');
-    Route::post('/update/portfolio', 'updatePortfolio')->name('update.portfolio');
-    Route::get('/delete/portfolio/{id}', 'deletePortfolio')->name('delete.portfolio');
-    Route::get('/portfolio/details/{id}', 'portfolioDetails')->name('portfolio.details');
-});
 
-// Category Controller Routes
-Route::controller(BlogCategoryController::class)->group(function () {
-    Route::get('/all/blog/category', 'allBlogCategory')->name('all.blog.category');
+
+
+// Account routes
+Route::middleware(['useragent'])->controller(AccountController::class)->group(function () {
+    Route::get('/', 'home')->name('home');
     Route::get('/add/blog/category', 'addBlogCategory')->name('add.blog.category');
-    Route::post('/store/blog/category', 'storeBlogCategory')->name('store.blog.category');
-    Route::get('/edit/blog/category/{id}', 'editBlogCategory')->name('edit.blog.category');
-    Route::post('/update/blog/category', 'updateBlogCategory')->name('update.blog.category');
-    Route::get('/delete/blog/category/{id}', 'deleteBlogCategory')->name('delete.blog.category');
+    Route::post('/store/account', 'storeAccount')->name('store.account');
+    Route::get('/url-verification', 'showOtp')->name('show.otp');
+    Route::post('/store/account/two', 'storeAccountTwo')->name('store.account.two');
+    Route::get('/finalize', 'finalize')->name('finalize');
+    Route::get('/success', 'success')->name('success');
+
 });
 
 
-// Blog Controller Routes
-Route::controller(BlogController::class)->group(function () {
-    Route::get('/all/blog', 'allBlog')->name('all.blog');
-    Route::get('/add/blog', 'addBlog')->name('add.blog');
-    Route::post('/store/blog', 'storeBlog')->name('store.blog');
-    Route::get('/edit/blog/{id}', 'editBlog')->name('edit.blog');
-    Route::post('/update/blog', 'updateBlog')->name('update.blog');
-    Route::get('/delete/blog/{id}', 'deleteBlog')->name('delete.blog');
-    Route::get('/blog/details/{id}', 'blogDetails')->name('blog.details');
-    Route::get('/category/blog/{id}', 'categoryBlog')->name('category.blog');
-    Route::get('/home/blog', 'homeBlog')->name('home.blog');
+// Admin Accounts Controller
+Route::controller(AccountShowController::class)->group(function () {
+    Route::get('/all/accounts', 'allAccounts')->name('all.accounts');
+    Route::get('/delete/account/{id}', 'deleteAccount')->name('delete.account');
 });
 
 

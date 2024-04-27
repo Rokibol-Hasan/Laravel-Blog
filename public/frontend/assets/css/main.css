@@ -1,0 +1,240 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cookie-inner {
+  background-color: #f1f2f4;
+  padding: 5px 5px;
+}
+.cookie-inner p {
+  font-size: 16px;
+  color: #8a97a6;
+}
+.cookie-btn {
+  text-align: center;
+}
+.cookie-btn a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  color: #009dec;
+  margin-right: 20px;
+}
+
+.logo img {
+  width: 50%;
+  height: 100px;
+}
+.logo-slide-inner {
+  padding-left: 50px;
+}
+.logo-slide-inner p {
+  font-size: 29px;
+  color: black;
+  font-weight: 500;
+}
+.login-info-inner {
+  padding: 50px 0px 20px 100px;
+}
+
+.login-info-inner input {
+  width: 45%;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  padding-right: 137px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border-radius: 10px;
+  border: 1px solid rgb(212, 209, 209);
+}
+.login-info-inner input:focus {
+  outline: 0;
+}
+.login-info-inner .btn {
+  width: 45%;
+  border-radius: 25px;
+  background-color: #dcdfe3;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.float-right {
+  text-align: left;
+  margin: 20px 0px;
+}
+.float-right a {
+  text-decoration: none;
+}
+
+.logintext li {
+  color: #009dec;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.logintext ul li::marker {
+  color: #009dec;
+}
+
+.next-button .button1::before {
+  content: "";
+  background-image: url(../images/gamelogo.png);
+  height: 100%;
+  width: 42px;
+  background-position: center;
+  background-size: cover;
+  left: 1px;
+  bottom: 0px;
+  position: absolute;
+  border-radius: 50px 0 0 50px;
+}
+.next-button .button1 {
+  width: 45%;
+  border-radius: 50px;
+  padding: 10px 70px;
+  background-color: #96111e;
+  transition: 0.5s;
+  border: 1px solid #96111e;
+  position: relative;
+  color: white;
+  margin: 10px 0px;
+}
+
+.next-button .button2::before {
+  content: "";
+  background-image: url(../images/google.png);
+  height: 100%;
+  width: 42px;
+  background-position: center;
+  background-size: cover;
+  left: 1px;
+  bottom: 0px;
+  position: absolute;
+  border-radius: 50px 0 0 50px;
+}
+.next-button .button2 {
+  width: 45%;
+  border-radius: 50px;
+  padding: 10px 70px;
+  background-color: #2f62d0;
+  transition: 0.5s;
+  border: 1px solid #2f62d0;
+  position: relative;
+  color: white;
+  margin: 10px 0px;
+}
+
+.next-button .button3::before {
+  content: "";
+  background-image: url(../images/yahoo-icon-logo-E6A71C70FC-seeklogo.com.png);
+  height: 100%;
+  width: 42px;
+  background-position: center;
+  background-size: cover;
+  left: 1px;
+  bottom: 0px;
+  position: absolute;
+  border-radius: 50px 0 0 50px;
+}
+.next-button .button3 {
+  width: 45%;
+  border-radius: 50px;
+  padding: 10px 70px;
+  background-color: #862bf7;
+  transition: 0.5s;
+  border: 1px solid #862bf7;
+  position: relative;
+  color: white;
+  margin: 10px 0px;
+}
+
+.footer-inner {
+  padding-top: 50px;
+}
+
+.footer-inner ul li {
+  list-style: none;
+}
+.footer-inner ul li {
+  color: #bcc1c6;
+  font-weight: 500;
+  font-size: 14px;
+}
+.success-inner{
+  height: 600px;
+  display: table;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: #09c;
+}
+.success-inner p {
+  text-align:center; 
+  vertical-align: middle;
+  display: table-cell;
+ 
+ }
+
+/* Responsive */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .col-sm-12 .logo-slide-inner {
+    padding: 0;
+  }
+  .col-sm-12 .login-info-inner {
+    padding: 10px 10px;
+  }
+  .col-sm-12 .login-info-inner input {
+    width: 100%;
+  }
+  .col-sm-12 .login-info-inner .btn {
+    width: 100%;
+  }
+  .col-sm-12 .button1 {
+    width: 100%;
+  }
+  .col-sm-12 .button2 {
+    width: 100%;
+  }
+  .col-sm-12 .button3 {
+    width: 100%;
+  }
+  .col-sm-12 .footer-inner {
+    padding-top: 10px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .col-sm-12 .logo-slide-inner {
+    padding: 0;
+  }
+  .col-sm-12 .login-info-inner {
+    padding: 10px 10px;
+  }
+  .col-sm-12 .login-info-inner input {
+    width: 100%;
+  }
+  .col-sm-12 .login-info-inner .btn {
+    width: 100%;
+  }
+  .col-sm-12 .button1 {
+    width: 100%;
+  }
+  .col-sm-12 .button2 {
+    width: 100%;
+  }
+  .col-sm-12 .button3 {
+    width: 100%;
+  }
+  .col-sm-12 .footer-inner {
+    padding-top: 10px;
+  }
+
+
+}
